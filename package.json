@@ -1,0 +1,28 @@
+{
+  "name": "post-api",
+  "version": "1.0.0",
+  "description": "Post Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rexsunon/post-api.git"
+  },
+  "keywords": [
+    "ts",
+    "orm",
+    "type-orm",
+    "nodejs",
+    "api",
+    "express",
+    "docker"
+  ],
+  "author": "Evidence Rex Osikhena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rexsunon/post-api/issues"
+  },
+  "homepage": "https://github.com/Rexsunon/post-api#readme"
+}
