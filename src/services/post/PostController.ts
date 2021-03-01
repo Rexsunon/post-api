@@ -7,7 +7,7 @@ import { createPost, getPost, getPosts, IPostPayload } from './repository/post';
 @Tags('Post')
 export default class PostController {
   @Get('/')
-  public async getUsers(): Promise<Array<PostModel>> {
+  public async getPosts(): Promise<Array<PostModel>> {
     return getPosts();
   }
 
