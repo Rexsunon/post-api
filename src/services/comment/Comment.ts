@@ -10,27 +10,27 @@ import {
 } from 'typeorm';
 
 import User from '../user/User';
-import Comment from '../comment/Comment';
+import Post from '../post/Post';
 
 @Entity()
-export default class Post {
+export default class Comment {
   @PrimaryGeneratedColumn()
   id!: number;
-
-  @Column()
-  title!: string;
 
   @Column({ type: 'text' })
   content!: string;
 
   @Column({ nullable: true })
   userId!: number;
-  @ManyToOne((_type) => User, (user: User) => user.posts)
+  @ManyToOne((_type) => User, (user: User) => user.comments)
   @JoinColumn()
   user!: User;
 
-  @OneToMany((_type) => Comment, (comment: Comment) => comment.post)
-  comments!: Array<Comment>;
+  @Column({ nullable: true })
+  postId!: number;
+  @ManyToOne((_type) => User, (post: Post) => post.comments)
+  @JoinColumn()
+  post!: Post;
 
   @CreateDateColumn()
   createdAt!: Date;
