@@ -2,9 +2,12 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+
+import Post from '../post/Post';
 
 @Entity()
 export default class User {
@@ -19,6 +22,9 @@ export default class User {
 
   @Column()
   email!: string;
+
+  @OneToMany((_type) => Post, (post: Post) => post.user)
+  posts!: Array<Post>;
 
   @CreateDateColumn()
   createdAt!: Date;
