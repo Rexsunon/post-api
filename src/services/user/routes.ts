@@ -20,7 +20,7 @@ router.get('/:id', async (req: Request, res: Response, _next: NextFunction) => {
   const controller = new UserController();
   const response = await controller.getUser(Number(req.params.id));
   if (!response)
-    res
+    return res
       .status(404)
       .json({ success: false, message: 'User not found', data: {} });
   return res.status(200).json({ success: true, data: response });

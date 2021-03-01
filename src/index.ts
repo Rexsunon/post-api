@@ -4,7 +4,7 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 
-import Router from './routes';
+import Router from './services';
 import dbConfig from './config/database';
 
 const PORT = process.env.PORT || 8000;
