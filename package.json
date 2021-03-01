@@ -4,7 +4,16 @@
   "description": "Post Api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "nodemon"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "exec": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -24,5 +33,17 @@
   "bugs": {
     "url": "https://github.com/Rexsunon/post-api/issues"
   },
-  "homepage": "https://github.com/Rexsunon/post-api#readme"
+  "homepage": "https://github.com/Rexsunon/post-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^14.14.31",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
 }
