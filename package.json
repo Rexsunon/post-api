@@ -4,9 +4,12 @@
   "description": "Post Api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/index.js",
     "build": "tsc",
-    "dev": "nodemon"
+    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
+    "prebuild": "npm run swagger",
+    "predev": "npm run swagger",
+    "swagger": "tsoa spec"
   },
   "nodemonConfig": {
     "watch": [
