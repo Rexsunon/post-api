@@ -9,7 +9,7 @@ import {
 } from './repository/comment';
 
 @Route('comments')
-@Tags('comment')
+@Tags('Comment')
 export default class CommentController {
   @Get('/')
   public async getComments(): Promise<Array<Comment>> {
