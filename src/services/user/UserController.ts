@@ -1,4 +1,5 @@
 import { Get, Route, Post, Tags, Body, Path } from 'tsoa';
+
 import User from './User';
 import { createUser, getUser, getUsers, IUserPayload } from './repository/user';
 
